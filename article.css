@@ -1,0 +1,1034 @@
+/*
+Theme Name: EC-blog
+Descripption:
+Auther: Yuya Yoshida
+Version:1.0
+*/
+#wpadminber{
+  position: absolute;
+  top:0;
+  margin-top: -500px;
+}
+
+body {
+font-family: Verdana, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, YuGothic, sans-serif;
+	background-color:#EEEEEE;
+	max-width:1200px;
+	margin:0 auto;
+}
+
+/*
+body {
+  background: #25343F;
+  color: #fff;
+  font-family: Verdana, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, YuGothic, sans-serif;
+}
+*/
+/*====スクロールごとに表示部=======================================*/
+/*================================================================*/
+.fadein {
+  opacity: 0.3;
+  transform: translate(0, 200px);
+  transition: all 1s;
+}
+
+.fadein.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*=======ヘッダ部分================================================*/
+/*================================================================*/
+.site-header {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: .5s;
+	width:100%;
+	left:0;
+  z-index: 999;
+}
+
+.site-logo img {
+  max-height: 60px;
+  margin: 10px 30px 0 0;
+}
+
+.botton-header{
+  position: absolute;
+  width: 50%;
+  margin-top: -50px;
+  right: 0;
+}
+nav ul {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+}
+
+nav li {
+  display: table-cell;
+  min-width: 50px;
+
+}
+
+nav a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #555;
+  padding-bottom: 5px;
+
+}
+
+nav li.current {
+  border-bottom: 3px solid #92D050;
+}
+
+nav li:hover {
+  color: #E7DA66;
+  border-bottom: 3px solid #1e90ff;
+border-radius: 3px;
+}
+
+
+
+/*====サイドバー表示部=======================================*/
+/*================================================================*/
+.side-box{
+	position:absolute;
+	width:300px;
+	height:7000px;
+	margin-top:50px;
+	background-color:#FFFFFF;
+}
+
+.profile{
+	text-align:center;
+	width : 90%;
+	height : 500px;
+	margin: 0px 0 0 0;
+	background-color:#FFFFFF;
+}
+.p-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	background-color :#192f60;
+	opacity:0.9;
+	margin: 50px 0 50px 0;
+	color:#EEEEEE;
+}
+
+.p-img img{
+	width:200px;
+	border-radius: 50%;
+	margin-top:-20px;
+}
+.p-content{
+	margin: 10px 0 0 0;
+	background-color:#DDD;
+	width:90%;
+	height:200px;
+}
+
+.search{
+	text-align:center;
+	width : 90%;
+	height : 120px;
+	background-color:#FFFFFF;
+}
+.se-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	margin: 50px 0 50px 0;
+	background-color :#192f60;
+	color:#EEEEEE;
+}
+
+.s-window{
+	margin: -40px 0 0 0%;
+	background-color:#DDDDDD;
+	width:80%;
+	height:70px;
+}
+
+.ranking-side{
+	width : 90%;
+
+	background-color:#FFFFFF;
+}
+.r-title-side{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	margin: 50px 0 50px 0;
+	background-color :#192f60;
+	color:#EEEEEE;
+}
+
+.r-content-side{
+	margin: 50px 0 0px 0px;
+	width:90%;
+}
+
+.category-side{
+	text-align:center;
+	width : 90%;
+
+	background-color:#FFFFFF;
+}
+.c-title-side{
+	border-radius: 10px 30px 10px 0px;
+	text-align:center;
+	font-size:150%;
+	margin: 50px 0 50px 0;
+	background-color :#192f60;
+	color:#EEEEEE;
+}
+.c-content-side{
+	margin: 50px 0 0px 0px;
+	width:90%;
+}
+
+/*Popular Posts設定部(サイドバー)*/
+
+ul#popular-posts.wpp-list a{
+	color: #444444;
+
+}
+
+ul#popular-posts.wpp-list {
+    margin: 0px 0px 0px -70px;
+}
+
+ul#popular-posts.wpp-list {
+    counter-reset: wpp-ranking;
+}
+ul#popular-posts.wpp-list li:before {
+  background: #192f60;
+  border-radius: 50%;
+  content: counter(wpp-ranking, decimal);
+  counter-increment: wpp-ranking;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul#popular-posts.wpp-list li {
+	width:240px;
+	background-color:#FFFFFF;
+    margin: 5px 10px 10px 0px;
+	left:0px;
+	list-style-type: none;
+  	padding: 5px 0 10px 0;
+  	position: relative;
+    border-bottom: solid 2px #666666;
+}
+ul#popular-posts.wpp-list li img {
+	border-radius: 5px 5px 5px 5px;
+}
+
+ul#popular-posts.wpp-list li span {
+	display:none;
+}
+
+ul#popular-posts .wpp-post-title{
+	color:#111;
+}
+
+/*サイドバー(カテゴリ)設定部*/
+
+
+/*====SNSバー表示部=======================================*/
+/*================================================================*/
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.me {
+  width: 400px;
+  margin: 90px auto;
+}
+.me p,
+.me h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.me p {
+  font-weight: 200;
+}
+.me span {
+  font-weight: bold;
+}
+.social {
+  position: fixed;
+  top: 60%;
+}
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-270px, 0);
+  -moz-transform: translate(-270px, 0);
+  -ms-transform: translate(-270px, 0);
+  -o-transform: translate(-270px, 0);
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li:hover {
+  -webkit-transform: translate(110px, 0);
+  -moz-transform: translate(110px, 0);
+  -ms-transform: translate(110px, 0);
+  -o-transform: translate(110px, 0);
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: #35357d;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li i {
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/*=======メイン部分===============================================*/
+/*================================================================*/
+/*================================================================*/
+
+#main-box{
+	width:900px;
+	margin:50px 0 0 25%;
+	background-color:#FFFFFF;
+	height:7000px;
+}
+
+#main-box h1{
+	position:absolute;
+	font-size:150%;
+	margin-left:30%;
+
+}
+
+.icatch-top{
+	margin: 20px 0 0 3%;
+}
+
+.recomend-box{
+	position:absolute;
+	width:400px;
+	margin:-250px 0 500px 30%;
+}
+
+.recomend-box h2{
+	color:#192f60;
+	margin-left:-20px;
+}
+.recomend-content{
+	font-size:120%;
+}
+.recomend-content ul{
+  color: #1e366a;
+  border-top: solid #1e366a 1px;/*上のボーダー*/
+  border-bottom: solid #1e366a 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+}
+.recomend-content p:after {
+    content: '';
+    display: block;
+    margin-top: -30px;
+	 margin-left: -50px;
+    width: 1em;
+    height: 1em;
+    border-top: #4169e1 5px solid;
+    border-right: #4169e1 5px solid;
+    transform: rotate(45deg);
+}
+
+
+/*=======写真を撮った場所部===========================================*/
+/*===================================================================*/
+.pic-prace-box{
+	background-color:#EEEEEE;
+	width:450px;
+	margin:100px 0 0px 45%;
+	padding:0 0 30px 20px;
+	border-radius:  20px 3px 40px 3px;
+}
+.pic-prace-box img{
+	width:240px;
+	margin:70px 0 0px 190px;
+}
+.pic-prace-text{
+	background-color:#4169e1;
+	margin: -250px 10px 30px 0px;
+	padding:0 10px 0px 10px;
+	border-radius: 5px;
+	position:absolute;
+	font-size:150%;
+	color:#FFFFFF;
+}
+
+.pic-prace-title{
+	margin: -200px 0 10px 0px;
+	font-size:160%;
+	font-weight:bold;
+	color:#192f60;
+}
+.pic-prace-subtitle{
+	font-size:110%;
+	margin:0px 0 0 10px;
+}
+.pic-prace-content{
+	font-size:90%;
+	width:150px;
+	margin:0px 0 0 30px;
+}
+/*================================================================*/
+/*================================================================*/
+
+.article-title{
+	margin: 50px 0px 20px 10px;
+	color:#192f60;
+	font-size:200%;
+	padding-left:10px;
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+}
+
+/*=======アイテム表示部(左)①============================================*/
+/*================================================================*/
+.article-box-left{
+	background-color:#FFFFFF;
+}
+
+.article-line-left{
+	border-left: 30px solid #FFF;
+	height:1000px;
+	position:absolute;
+	margin-top:30px;
+	margin-left:10px;
+	border-radius: 30px;
+}
+
+
+.item-pic-left{
+	margin:0px 0 0 100px;
+}
+.item-title-left{
+	margin:-450px 0 0px 45%;
+	font-size:200%;
+
+}
+.item-money-left{
+	margin:30px 0 0 45%;
+	font-size:120%;
+}
+.item-text-left{
+	margin:-10px 0 0 45%;
+	font-size:110%;
+	width:450px;
+}
+
+/*=======着用ポイント表示部(左)①============================================*/
+/*================================================================*/
+.box30 {
+	width:450px;
+	padding: 0 0 20px 150px;
+    margin: 0 0 200px 150px;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.box30 .box-title {
+    font-size: 1.2em;
+    background: #5fc2f5;
+    padding: 4px;
+	margin:0px 0 30px -150px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box30 p {
+    margin: 0;
+}
+
+.item-point{
+	margin:10px 0 0 300px;
+	font-size:110%;
+}
+
+.item-point-title{
+	font-size:150%;
+}
+.item-point-subtitle-g{
+	margin: 0px 0px 0px -100px;
+	font-size:120%;
+	color:red;
+}
+.item-point-subtitle-b{
+	margin: 0px 0px 0px -100px;
+	font-size:120%;
+	color:blue;
+}
+.item-point-content{
+	width:400px;
+	margin:-30px 0 30px 0;
+}
+
+/*=======購入場所部(左)①============================================*/
+/*================================================================*/
+
+.item-buy {
+	width:280px;
+	margin:50px 0 0 50px;
+
+}
+
+.item-buy-title{
+	font-size:100%;
+	margin: 20px 0 10px 10%;
+	text-align:center;
+	color:#333333;
+	font-weight:bold;
+}
+.item-buy-title {
+    position: relative;
+    padding:0.25em 1em;
+}
+.item-buy-title:before,.item-buy-title:after{
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.item-buy-title:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+}
+.item-buy-title:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+}
+.item-buy-title p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.item-buy p {
+    margin: 0;
+    padding: 0;
+}
+
+.item-buy-img {
+	display:inline-block;
+	max-width:130px;
+	height:100px;
+	background-color:#EE3E13;
+}
+
+.instagram-media instagram-media-rendered{
+	max-width:130px;
+}
+
+/*================================================================*/
+/*================================================================*/
+
+
+/*=======アイテム表示部(左)③============================================*/
+/*================================================================*/
+.article-box-left{
+	background-color:#FFFFFF;
+}
+.item-pic-left{
+	margin:0px 0 0 100px;
+}
+.item-title-left2{
+	margin:-250px 0 0px 45%;
+	font-size:200%;
+
+}
+.item-money-left{
+	margin:30px 0 0 45%;
+	font-size:120%;
+}
+.item-text-left{
+	margin:-10px 0 0 45%;
+	font-size:110%;
+	width:450px;
+}
+
+/*=======着用ポイント表示部(左)③============================================*/
+/*================================================================*/
+.box30 {
+	width:450px;
+	padding: 0 0 20px 150px;
+    margin: 0 0 100px 150px;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.box30 .box-title {
+    font-size: 1.2em;
+    background: #5fc2f5;
+    padding: 4px;
+	margin:0px 0 30px -150px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box30 p {
+    margin: 0;
+}
+
+.item-point{
+	margin:10px 0 0 300px;
+	font-size:110%;
+}
+
+.item-point-title{
+	font-size:150%;
+}
+.item-point-subtitle-g{
+	margin: 0px 0px 0px -100px;
+	font-size:120%;
+	color:red;
+}
+.item-point-subtitle-b{
+	margin: 0px 0px 0px -100px;
+	font-size:120%;
+	color:blue;
+}
+.item-point-content{
+	width:400px;
+	margin:-30px 0 30px 0;
+}
+
+/*=======購入場所部(左)③============================================*/
+/*================================================================*/
+
+.item-buy {
+	width:280px;
+	margin:50px 0 0 50px;
+
+}
+
+.item-buy-title{
+	font-size:100%;
+	margin: 20px 0 10px 10%;
+	text-align:center;
+	color:#333333;
+	font-weight:bold;
+}
+.item-buy-title {
+    position: relative;
+    padding:0.25em 1em;
+}
+.item-buy-title:before,.item-buy-title:after{
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.item-buy-title:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+}
+.item-buy-title:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+}
+.item-buy-title p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.item-buy p {
+    margin: 0;
+    padding: 0;
+}
+
+.item-buy-img {
+	display:inline-block;
+	max-width:130px;
+	height:100px;
+	background-color:#EE3E13;
+}
+
+.instagram-media instagram-media-rendered{
+	max-width:130px;
+}
+
+/*================================================================*/
+/*================================================================*/
+
+
+
+
+/*=======アイテム表示部(右)============================================*/
+/*================================================================*/
+
+
+.item-title {
+	font-size:200%;
+	color:#192f60;
+}
+
+.item-title-roma{
+	margin:0px 0 0px 8%;
+	font-family: 'Constantia','Iowan Old Style','Georgia',sans-serif;
+	font-size:200%;
+	color:#192f60;
+}
+.item-pic-right{
+	margin:0px 0 0 550px;
+}
+.item-title-right{
+	margin:-300px 0 0px 5%;
+	font-size:200%;
+
+}
+.item-money-right{
+	margin:30px 0 0 5%;
+	font-size:120%;
+}
+.item-text-right{
+	margin:-10px 0 0 5%;
+	font-size:110%;
+	width:450px;
+}
+
+/*=======購入場所部(右)============================================*/
+/*================================================================*/
+
+.item-buy-right {
+	width:250px;
+    position: absolute;
+    margin: 200px 0 0 5%;
+    padding: 0.5em 1em;
+    border: solid 3px #777;
+    border-radius: 8px;
+}
+.item-buy-right .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #333333;
+    font-weight: bold;
+}
+.item-buy p {
+    margin: 0;
+    padding: 0;
+}
+
+.item-buy-right-img {
+	width:150px;
+	height:100px;
+    margin: 10px 0 10px 50px;
+	background-color:#EE3E13;
+}
+
+/*=======組み合わせの理由部============================================*/
+/*================================================================*/
+.comb-content{
+	width:700px;
+	margin: 10px 0 0 5%;
+	font-size:110%;
+}
+
+/*=======最後のSNS部============================================*/
+/*================================================================*/
+
+.sns-last-box{
+	display:inline-block;
+	width:80px;
+	margin:50px 300px 50px 0px;
+}
+
+.link_button{
+	color: #4169e1;
+	font-weight:bold;
+}
+/*=======広告部============================================*/
+/*================================================================*/
+
+.adv-back-box{
+	width:156%;
+	margin: 2200px 0 0 0px;
+	height:600px;
+	background-color:#EEEEEE;
+}
+
+.adv-box{
+	text-align:center;
+	width:105%;
+	height:400px;
+	margin: -600px 0 0 0;
+	z-index:10;
+}
+.adv-box2{
+	text-align:center;
+	width:105%;
+	height:400px;
+	margin: -70px 0 0px 0;
+	z-index:10;
+}
+
+.adv1{
+	display:inline-block;
+	margin: 30px 10px 5px 0;
+	width:45%;
+	height:300px;
+	background-color:#441;
+}
+
+.adv2{
+	display:inline-block;
+	margin: 2px 10px 5px 0px;
+	width:45%;
+	height:300px;
+	background-color:#241;
+}
+
+.treat-box{
+	height:300px;
+}
+/*=======ランキング部分==========================================*/
+/*==============================================================*/
+
+
+.r-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	width : 70%;
+	margin: -300px 0 0 0%;
+	font-size : 200%;
+	background-color :#192f60;
+	color:#EEEEEE;
+
+}
+
+.ranking-box{
+	text-align : center;
+	width : 70%;
+	max-height:350px;
+	overflow-y:hidden;
+	margin:0px 0 0 0%;
+	background-color:#FFFFFF;
+}
+
+/*Popular Posts設定部(ランキングバー)*/
+ul#ranking-bar.wpp-list {
+    margin: 0px 0px 0px -0px;
+}
+
+ul#ranking-bar.wpp-list {
+    counter-reset: wpp-ranking;
+}
+ul#ranking-bar.wpp-list li :before {
+  background: #192f60;
+  border-radius: 50%;
+  content: counter(wpp-ranking, decimal);
+  counter-increment: wpp-ranking;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+ul#ranking-bar.wpp-list li {
+	width:180px;
+	background-color:#FFFFFF;
+    background-image: none;
+    margin: 20px 0px 20px 0px;
+	left:0px;
+	  list-style-type: none;
+  padding: 5px 0 0 0;
+  position: relative;
+}
+ul#ranking-bar.wpp-list li img {
+	border-radius: 5px 5px 5px 5px;
+}
+
+ul#ranking-bar.wpp-list li span {
+	display:none;
+}
+
+ul#ranking-bar .wpp-post-title{
+	display:none;
+}
+
+/*=======トップへ戻る部分==========================================*/
+/*==============================================================*/
+#page-top {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    font-size: 77%;
+
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 30px;
+
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+/*=======フッター部分==========================================*/
+/*==============================================================*/
+.footer {
+  background-color: #333333;
+  width: 120%;
+  height: 500px;
+  margin: 200px 0 -10px -10%;
+}
+
+.footer-box {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin: 0 0 0 0;
+}
+
+.footer-box svg {
+  margin-top: 50px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+/*=======ページ送り部分==========================================*/
+/*==============================================================*/
+
+/*wp-pagenavi 06*/
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: #777;
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	background:-ms-linear-gradient( top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ededed), color-stop(100%, #dfdfdf) );
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration:none;
+}
+.wp-pagenavi a:hover{
+    color:#e4685d;
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	background:-ms-linear-gradient( top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #dfdfdf), color-stop(100%, #ededed) );
+	background-color:#dfdfdf;
+    }
+.wp-pagenavi span.current{
+	color: #FFF;
+	background:-moz-linear-gradient( center top, #fc8d83 5%, #e4685d 100% );
+	background:-ms-linear-gradient( top, #fc8d83 5%, #e4685d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#e4685d');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #6495ed), color-stop(100%,#000080) );
+	background-color:#222222;
+	border-color: #000080;
+	font-weight: bold;
+    }
+
+
+/*=======お問い合わせフォーム部分==========================================*/
+/*=======pagetemplate-contact.php=================================*/
+body{
+
+}
+.contact-box{
+	margin:100px 0 0 0;
+}

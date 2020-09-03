@@ -1,0 +1,885 @@
+/*
+Theme Name: EC-blog
+Descripption:
+Auther: Yuya Yoshida
+Version:1.0
+*/
+#wpadminber{
+  position: absolute;
+  top:0;
+  margin-top: -500px;
+}
+
+
+body {
+	margin: 0 auto;
+	font-family: Verdana, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, YuGothic, sans-serif;
+	background-color:#FFFFFF;
+	max-width:1200px;
+}
+/*
+body {
+  background: #25343F;
+  color: #fff;
+  font-family: Verdana, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, YuGothic, sans-serif;
+}
+*/
+
+/*====スクロールごとに表示部=======================================*/
+/*================================================================*/
+.fadein {
+  opacity: 0.3;
+  transform: translate(0, 200px);
+  transition: all 1s;
+}
+
+.fadein.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*=======ヘッダ部分================================================*/
+/*================================================================*/
+.site-header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: .5s;
+  width:100%;
+  left:0;
+  z-index: 999;
+}
+
+.site-logo img {
+  max-height: 60px;
+  margin: 10px 30px 0 0;
+}
+
+.botton-header{
+  position: absolute;
+  width: 50%;
+  margin-top: -50px;
+  right: 0;
+}
+nav ul {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+}
+
+nav li {
+  display: table-cell;
+  min-width: 50px;
+}
+
+nav a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #555;
+  padding-bottom: 5px;
+}
+
+nav li.current {
+  border-bottom: 3px solid #92D050;
+}
+
+nav li:hover {
+  color: #E7DA66;
+  border-bottom: 3px solid #1e90ff;
+  border-radius: 3px;
+}
+
+/*=======サイトトップ部分==========================================*/
+/*================================================================*/
+/*================================================================*/
+
+.top-box{
+	height : 600px;
+	width :  125%;
+	margin : 152px 0 50px 0;
+}
+
+.top-img-box{
+	position:absolute;
+	height:550px;
+	margin-top:62px;
+	background-color:#000000;
+	opacity:0.3;
+}
+
+.top-img0 img{
+	position:absolute;
+	margin: -120px 0 0 0;
+	height: 380px;
+	overflow-y:hidden;
+	opacity:0.8;
+}
+
+.top-img img{
+	height:550px;
+	width:100%;
+	overflow-y:hidden;
+	margin-left:-10%;
+}
+
+.top-img2 img{
+	position: absolute;
+}
+
+.slider{
+	margin:-500px 0 0 -50px;
+}
+
+.slider2{
+	margin:-120px 0 0 60%;
+}
+
+
+
+/*====サイドバー表示部=======================================*/
+/*================================================================*/
+.side-box{
+	position:absolute;
+	width:300px;
+	margin-top:20px;
+	background-color:#FFFFFF;
+	 z-index:800;
+}
+
+.profile{
+	text-align:center;
+	width : 90%;
+	height : 600px;
+	margin: 0px 0 0 0;
+	background-color:#FFFFFF;
+}
+.p-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	background-color :#192f60;
+	opacity:0.9;
+	margin: 50px 0 50px 0;
+	color:#EEEEEE;
+}
+
+.p-name{
+	text-align:center;
+	font-size:200%;
+	color:#444444;
+	font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+	margin-bottom:10px;
+}
+
+.p-img img{
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	margin-top:-20px;
+}
+.p-content{
+	text-align:left;
+	margin: 10px 0px 0 0px;
+	padding:0px 10px 0 10px;
+	width:260px;
+	height:300px;
+	font-size:75%;
+
+    color: #474747;
+
+    border-left: double 7px #DDDDDD;/*左線*/
+    border-right: double 7px #DDDDDD;/*右線*/
+}
+
+.follow-me {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 30px 20px 8px 20px;
+  padding: 0;
+}
+.follow-me li a::before {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 40px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
+.follow-me li a[href*="amazon.co.jp"]::before,
+.follow-me li a[href*="amazon.com"]::before         { border-color: #ff9900; color: #ff9900; content: "\f270"; }
+.follow-me li a[href*="codepen.io"]::before         { border-color: #000000; color: #000000; content: "\f1cb"; }
+.follow-me li a[href*="delicious.com"]::before      { border-color: #3399ff; color: #3399ff; content: "\f1a5"; }
+.follow-me li a[href*="deviantart.com"]::before     { border-color: #05cc47; color: #05cc47; content: "\f1bd"; }
+.follow-me li a[href*="digg.com"]::before           { border-color: #000000; color: #000000; content: "\f1a6"; }
+.follow-me li a[href*="dribble.com"]::before        { border-color: #000000; color: #ea4c89; content: "\f17d"; }
+.follow-me li a[href*="dropbox.com"]::before        { border-color: #007ee5; color: #007ee5; content: "\f16b"; }
+.follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; color: #3b5998; content: "\f09a"; }
+.follow-me li a[href*="feedly.com"]::before         { border-color: #6cc655; color: #6cc655; content: "\f09e"; }
+.follow-me li a[href*="flickr.com"]::before         { border-color: #0063cc; color: #0063dc; content: "\f16e"; }
+.follow-me li a[href*="foursquare.com"]::before     { border-color: #f94877; color: #f94877; content: "\f180"; }
+.follow-me li a[href*="github.com"]::before         { border-color: #181717; color: #181717; content: "\f09b"; }
+.follow-me li a[href*="plus.google.com"]::before    { border-color: #dc4e41; color: #dc4e41; content: "\f0d5"; }
+.follow-me li a[href*="b.hatena.ne.jp"]::before     { border-color: #008fde; color: #008fde; content: "\f027"; font-family: blogicon; }
+.follow-me li a[href*="instagram.com"]::before      { border-color: #CC3399; color: #CC3399; content: "\f16d"; }
+.follow-me li a[href*="last.fm"]::before            { border-color: #d51007; color: #d51007; content: "\f202"; }
+.follow-me li a[href*="linkedin.com"]::before       { border-color: #0077b5; color: #0077b5; content: "\f0e1"; }
+.follow-me li a[href*="nicovideo.jp"]::before       { border-color: #eaeaea; color: #eaeaea; content: "\f047"; font-family: blogicon; }
+.follow-me li a[href*="pinterest.com"]::before      { border-color: #bd081c; color: #bd081c; content: "\f0d2"; }
+.follow-me li a[href*=""]::before      { border-color: #ef3f56; color: #ef3f56; content: "\f265"; }
+.follow-me li a[href*="reddit.com"]::before         { border-color: #ff4500; color: #ff4500; content: "\f1a1"; }
+.follow-me li a[href*="skype.com"]::before,
+.follow-me li a[href*="skype:"]::before             { border-color: #00aff0; color: #00aff0; content: "\f17e"; }
+.follow-me li a[href*="slideshare.net"]::before     { border-color: #2d2d2d; color: #2d2d2d; content: "\f1e7"; }
+.follow-me li a[href*="spotify.com"]::before        { border-color: #84bd00; color: #84bd00; content: "\f1bc"; }
+.follow-me li a[href*="steamcommunity.com"]::before { border-color: #171a21; color: #171a21; content: "\f1b6"; }
+.follow-me li a[href*="stumbleupon.com"]::before    { border-color: #eb4929; color: #eb4929; content: "\f1a4"; }
+.follow-me li a[href*="tumblr.com"]::before         { border-color: #36465d; color: #36465d; content: "\f173"; }
+.follow-me li a[href*="twitch.tv"]::before          { border-color: #6441a5; color: #6441a5; content: "\f1e8"; }
+.follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; color: #55acee; content: "\f099"; }
+.follow-me li a[href*="vimeo.com"]::before          { border-color: #1ab7ea; color: #1ab7ea; content: "\f27d"; }
+.follow-me li a[href*="vine.co"]::before            { border-color: #11b58a; color: #11b58a; content: "\f1ca"; }
+.follow-me li a[href*="weibo.com"]::before          { border-color: #e6162d; color: #e6162d; content: "\f18a"; }
+.follow-me li a[href*="whatsapp.com"]::before       { border-color: #64d548; color: #64d548; content: "\f232"; }
+.follow-me li a[href*="https://twitter.com/yuu_yoshi12"]::before,
+.follow-me li a[href*="wordpress.org"]::before      { border-color: #21759b; color: #21759b; content: "\f19a"; }
+.follow-me li a[href*="youtube.com"]::before        { border-color: #cd201f; color: #cd201f; content: "\f16a"; }
+.follow-me li a[href$="/feed"]::before              { border-color: #ffa500; color: #ffa500; content: "\f09e"; }
+.follow-me li a[href$="/subscribe"]::before         { border-color: #363636; color: #363636; content: "\f000"; font-family: blogicon; }
+.follow-me li a:hover::before {
+  color: #fff;
+}
+.follow-me li a[href*="amazon.co.jp"]:hover::before,
+.follow-me li a[href*="amazon.com"]:hover::before         { background-color: #ff9900; }
+.follow-me li a[href*="codepen.io"]:hover::before         { background-color: #000000; }
+.follow-me li a[href*="delicious.com"]:hover::before      { background-color: #3399ff; }
+.follow-me li a[href*="deviantart.com"]:hover::before     { background-color: #05cc47; }
+.follow-me li a[href*="digg.com"]:hover::before           { background-color: #000000; }
+.follow-me li a[href*="dribble.com"]:hover::before        { background-color: #ea4c89; }
+.follow-me li a[href*="dropbox.com"]:hover::before        { background-color: #007ee5; }
+.follow-me li a[href*="facebook.com"]:hover::before       { background-color: #3b5998; }
+.follow-me li a[href*="feedly.com"]:hover::before         { background-color: #6cc655; }
+.follow-me li a[href*="flickr.com"]:hover::before         { background-color: #0063dc; }
+.follow-me li a[href*="foursquare.com"]:hover::before     { background-color: #f94877; }
+.follow-me li a[href*="github.com"]:hover::before         { background-color: #181717; }
+.follow-me li a[href*="plus.google.com"]:hover::before    { background-color: #dc4e41; }
+.follow-me li a[href*="b.hatena.ne.jp"]:hover::before     { background-color: #008fde; }
+.follow-me li a[href*="instagram.com"]:hover::before      { background-color: #CC3399; }
+.follow-me li a[href*="last.fm"]:hover::before            { background-color: #d51007; }
+.follow-me li a[href*="linkedin.com"]:hover::before       { background-color: #0077b5; }
+.follow-me li a[href*="nicovideo.jp"]:hover::before       { background-color: #eaeaea; }
+.follow-me li a[href*="pinterest.com"]:hover::before      { background-color: #bd081c; }
+.follow-me li a[href*=""]:hover::before      { background-color: #ef3f56; }
+.follow-me li a[href*="reddit.com"]:hover::before         { background-color: #ff4500; }
+.follow-me li a[href*="skype.com"]:hover::before,
+.follow-me li a[href*="skype:"]:hover::before             { background-color: #00aff0; }
+.follow-me li a[href*="slideshare.net"]:hover::before     { background-color: #2d2d2d; }
+.follow-me li a[href*="spotify.com"]:hover::before        { background-color: #84bd00; }
+.follow-me li a[href*="steamcommunity.com"]:hover::before { background-color: #171a21; }
+.follow-me li a[href*="stumbleupon.com"]:hover::before    { background-color: #eb4929; }
+.follow-me li a[href*="tumblr.com"]:hover::before         { background-color: #36465d; }
+.follow-me li a[href*="twitch.tv"]:hover::before          { background-color: #6441a5; }
+.follow-me li a[href*="twitter.com"]:hover::before        { background-color: #55acee; }
+.follow-me li a[href*="vimeo.com"]:hover::before          { background-color: #1ab7ea; }
+.follow-me li a[href*="vine.co"]:hover::before            { background-color: #11b58a; }
+.follow-me li a[href*="weibo.com"]:hover::before          { background-color: #e6162d; }
+.follow-me li a[href*="whatsapp.com"]:hover::before       { background-color: #64d548; }
+.follow-me li a[href*="https://twitter.com/yuu_yoshi12"]:hover::before,
+.follow-me li a[href*="wordpress.org"]:hover::before      { background-color: #21759b; }
+.follow-me li a[href*="youtube.com"]:hover::before        { background-color: #cd201f; }
+.follow-me li a[href$="/feed"]:hover::before              { background-color: #ffa500; }
+.follow-me li a[href$="/subscribe"]:hover::before         { background-color: #363636; }
+
+#instagram-text, #ichinana-text, #wear-text{
+	display:none;
+}
+
+#instagram-botton:hover #instagram-text{
+	display:block;
+	color:#CC3399;
+	position:absolute;
+	margin-left:-10px;
+}
+
+#ichinana-botton:hover #ichinana-text{
+	display:block;
+	color:#cd201f;
+	position:absolute;
+	margin-left:-1px;
+}
+
+#wear-botton:hover #wear-text{
+	display:block;
+	color:#21759b;
+	position:absolute;
+	margin-left:5px;
+}
+
+.search{
+	text-align:center;
+	width : 90%;
+	height : 120px;
+	background-color:#FFFFFF;
+
+
+}
+.se-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	margin: 50px 0 50px 0;
+	background-color :#192f60;
+	color:#EEEEEE;
+}
+
+.s-window{
+	margin: -40px 0 0 0%;
+	height:70px;
+
+	    color: #474747;
+
+    border-left: double 7px #DDDDDD;/*左線*/
+    border-right: double 7px #DDDDDD;/*右線*/
+}
+
+.ranking-side{
+	width : 90%;
+
+	background-color:#FFFFFF;
+}
+.r-title-side{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	margin: 50px 0 50px 0;
+	background-color :#192f60;
+	color:#EEEEEE;
+}
+
+.r-content-side{
+	margin: 50px 0 0px 0px;
+
+		    color: #474747;
+
+    border-left: double 7px #DDDDDD;/*左線*/
+    border-right: double 7px #DDDDDD;/*右線*/
+}
+
+.category-side{
+	text-align:center;
+	width : 90%;
+
+	background-color:#FFFFFF;
+}
+.c-title-side{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size:150%;
+	margin: 50px 0 50px 0;
+	background-color :#192f60;
+	color:#EEEEEE;
+}
+.c-content-side{
+	margin: 50px 0 0px 0px;
+
+		    color: #474747;
+
+    border-left: double 7px #DDDDDD;/*左線*/
+    border-right: double 7px #DDDDDD;/*右線*/
+}
+
+/*Popular Posts設定部(サイドバー)*/
+
+ul#popular-posts.wpp-list a{
+	color: #444444;
+
+}
+
+ul#popular-posts.wpp-list {
+    margin: 0px 0px 0px -70px;
+}
+
+ul#popular-posts.wpp-list {
+    counter-reset: wpp-ranking;
+}
+ul#popular-posts.wpp-list li:before {
+  background: #192f60;
+  border-radius: 50%;
+  content: counter(wpp-ranking, decimal);
+  counter-increment: wpp-ranking;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul#popular-posts.wpp-list li {
+	width:240px;
+	background-color:#FFFFFF;
+    margin: 5px 10px 10px 0px;
+	left:0px;
+	list-style-type: none;
+  	padding: 5px 0 10px 0;
+  	position: relative;
+    border-bottom: solid 2px #666666;
+}
+ul#popular-posts.wpp-list li img {
+	border-radius: 5px 5px 5px 5px;
+}
+
+ul#popular-posts.wpp-list li span {
+	display:none;
+}
+
+ul#popular-posts .wpp-post-title{
+	color:#111;
+}
+
+/*サイドバー(カテゴリ)部*/
+/*====SNSバー表示部=======================================*/
+/*================================================================*/
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.me {
+  width: 400px;
+  margin: 90px auto;
+}
+.me p,
+.me h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.me p {
+  font-weight: 200;
+}
+.me span {
+  font-weight: bold;
+}
+.social {
+  position: fixed;
+  top: 60%;
+  left:0px;
+	 z-index:1;
+
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+
+}
+.social:hover {
+	z-index:1000;
+}
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-270px, 0);
+  -moz-transform: translate(-270px, 0);
+  -ms-transform: translate(-270px, 0);
+  -o-transform: translate(-270px, 0);
+  transform: translate(-270px, 0);
+
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+
+}
+.social ul li:hover {
+  -webkit-transform: translate(110px, 0);
+  -moz-transform: translate(110px, 0);
+  -ms-transform: translate(110px, 0);
+  -o-transform: translate(110px, 0);
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: #35357d;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 0px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/*=======メイン部分==========================================*/
+/*================================================================*/
+/*================================================================*/
+
+.main-box{
+	max-width : 800px;
+	margin:50px 0 0 30%;
+	background-color:#FFFFFF;
+}
+
+/*=======記事表示部============================================*/
+/*================================================================*/
+
+.s-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	font-size : 200%;
+	background-color :#192f60;
+	margin-bottom:75px;
+	color:#EEEEEE;
+}
+
+#article-box-b{
+	position : absolute;
+	width : 180%;
+	margin-top:1200px;
+}
+
+#article-box{
+	position : absolute;
+	text-align : center;
+	width : 800px;
+	background-color:#FFFFFF;
+}
+
+.icatch-img{
+	background-color : #FFFFFF;
+	display : inline-block;
+	border:1px;
+    margin:30px 20px 50px 0px;
+    position: relative;
+    padding: 10px 20px 20px 20px;
+    border-top: solid 2px #AAA;
+    border-bottom: solid 2px #AAA;
+}
+.icatch-img:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: #CCCCCC;
+}
+.icatch-img:before {left: 10px;}
+.icatch-img:after {right: 10px;}
+.icatch-img p {
+    margin: 0;
+    padding: 0;
+}
+
+.icatch-img img{
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.icatch-img img:hover {
+  opacity: 0.6;
+}
+
+.icatch-img h2 a{
+	left:10px;
+	font-size: 60%;
+	color:#888888;
+}
+.icatch-img h2{
+	margin-block-start: 0.1em;
+}
+.short-post{
+	width:100%;
+	max-width:200px;
+	margin-top:-10px;
+	font-size:75%;
+	height:60px;
+	overflow-y:hidden;
+}
+/*=======広告部============================================*/
+/*================================================================*/
+
+.adv-back-box{
+	width:181%;
+	margin: 2150px 0 0 -500px;
+	height:600px;
+	background-color:#EEEEEE;
+}
+
+.adv-box{
+	text-align:center;
+	width:105%;
+	height:400px;
+	margin: -550px 0 0 0;
+	z-index:10;
+}
+.adv-box2{
+	text-align:center;
+	width:105%;
+	height:400px;
+	margin: -70px 0 0px 0;
+	z-index:10;
+}
+
+.adv1{
+	display:inline-block;
+	margin: 30px 10px 5px 0;
+	height:250px;
+}
+
+.adv2{
+	display:inline-block;
+	margin: 2px 10px 5px 0px;
+	width:45%;
+	height:300px;
+	background-color:#241;
+}
+
+.treat-box{
+	height:300px;
+}
+/*=======ランキング部分==========================================*/
+/*==============================================================*/
+
+
+.r-title{
+	border-radius: 10px 30px 10px 30px;
+	text-align:center;
+	width : 1200px;
+	margin: -800px 0 0 0px;
+	font-size : 200%;
+	background-color :#192f60;
+	color:#EEEEEE;
+
+}
+
+.ranking-box{
+	text-align : center;
+	width : 1200px;
+	max-height:300px;
+	overflow-y:hidden;
+	margin:0px 0 0 0;
+	background-color:#FFFFFF;
+}
+
+/*Popular Posts設定部(ランキングバー)*/
+ul#ranking-bar.wpp-list {
+    margin: 0px 0px 0px 0px;
+}
+
+ul#ranking-bar.wpp-list {
+    counter-reset: wpp-ranking;
+}
+
+ul#ranking-bar.wpp-list li{
+	display: inline-block;
+}
+ul#ranking-bar.wpp-list li :before {
+  background: #192f60;
+  border-radius: 50%;
+  content: counter(wpp-ranking, decimal);
+  counter-increment: wpp-ranking;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+ul#ranking-bar.wpp-list li {
+	width:180px;
+	background-color:#FFFFFF;
+    background-image: none;
+    margin: 20px 30px 20px 0px;
+	left:0px;
+
+	  list-style-type: none;
+  padding: 5px 0 0 0;
+  position: relative;
+}
+ul#ranking-bar.wpp-list li img {
+	border-radius: 5px 5px 5px 5px;
+}
+
+ul#ranking-bar.wpp-list li span {
+	display:none;
+}
+
+ul#ranking-bar .wpp-post-title{
+	display:none;
+}
+
+/*=======トップへ戻る部分==========================================*/
+/*==============================================================*/
+#page-top {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    font-size: 77%;
+
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 30px;
+
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+/*=======フッター部分==========================================*/
+/*==============================================================*/
+.footer {
+  background-color: #333333;
+  width: 120%;
+  height: 500px;
+  margin: 200px 0 -10px -10%;
+}
+
+.footer-box {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin: 0 0 0 0;
+}
+
+.footer-box svg {
+  margin-top: 50px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+/*=======ページ送り部分==========================================*/
+/*==============================================================*/
+
+/*wp-pagenavi 06*/
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: #777;
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	background:-ms-linear-gradient( top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ededed), color-stop(100%, #dfdfdf) );
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration:none;
+}
+.wp-pagenavi a:hover{
+    color:#e4685d;
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	background:-ms-linear-gradient( top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #dfdfdf), color-stop(100%, #ededed) );
+	background-color:#dfdfdf;
+    }
+.wp-pagenavi span.current{
+	color: #FFF;
+	background:-moz-linear-gradient( center top, #fc8d83 5%, #e4685d 100% );
+	background:-ms-linear-gradient( top, #fc8d83 5%, #e4685d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#e4685d');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #6495ed), color-stop(100%,#000080) );
+	background-color:#222222;
+	border-color: #000080;
+	font-weight: bold;
+    }
+
+
+/*=======お問い合わせフォーム部分==========================================*/
+/*=======pagetemplate-contact.php=================================*/
+body{
+
+}
+.contact-box{
+	margin:100px 0 0 0;
+}
